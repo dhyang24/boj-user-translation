@@ -1,6 +1,9 @@
 from http.client import HTTPSConnection
 from argparse import ArgumentParser
 from json import dump, load
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
 import re
 import os
 parser = ArgumentParser(description="Generates a new translation document.")
